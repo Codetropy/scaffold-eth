@@ -76,8 +76,8 @@ const checkBalances = async (address)=>{
     let tempBalance = await tempProvider.getBalance(address);
     let result = tempBalance && formatEther(tempBalance)
     if(result!=0){
-      console.log("Found a balance in ",n)
-      window.localStorage.setItem("network",n);
+      console.log("Found a balance in ", n)
+      window.localStorage.setItem("network", n);
       setTimeout(() => {
         window.location.reload();
       }, 1);
